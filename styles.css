@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Source+Sans+Pro&display=swap');
+
+/* CSS variables */
+
+:root {
+  --primary-color: #ba5a31;
+  --secondary-color: #dcba02;
+  --tertiary-color: #197bbd;
+
+  --background-color: #fff;
+  --text-color: #000;
+  --link-color: #543fd7;
+}
+
+html[data-theme='light'] {
+  --background-color: #fff;
+  --text-color: #000;
+  --link-color: #543fd7;
+}
+
+html[data-theme='dark'] {
+  --background-color: #2b2a33;
+  --text-color: #f7f8f8; /* MZ */
+  --text-color: #bdc1c6; /* MZ */
+  --link-color: #828fff;
+  --link-color: #8ab4f8; /* MZ */
+}
+
+/* Reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: var(--on-background);
+  background-color: var(--background);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lora', serif;
+}
+
+/* Page styles */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+}
+
+header {
+  padding: 0 2.5rem; /* 40px */
+  background-color: var(--primary-color);
+  align-items: center;
+}
+
+header object {
+  grid-column: span 6;
+}
+
+header nav {
+  grid-column: span 6;
+  justify-self: end;
+}
+
+header nav a {
+  color: #333;
+  margin-left: 0.625rem;
+  text-decoration: none;
+}
+
+.toggle-nav {
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  color: #777;
+}
