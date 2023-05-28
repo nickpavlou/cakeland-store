@@ -3,55 +3,111 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="color-scheme" content="light dark" /> -->
 
     <!-- font-awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="styles.css" />
+    <title>Home | Cupcakeland</title>
 
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png" />
     <link rel="manifest" href="/images/favicon/site.webmanifest" />
-
-    <!-- css -->
-    <link rel="stylesheet" href="styles.css" />
-    <title>Home | Cupcakeland</title>
   </head>
   <body>
-    <header class="grid">
-      <!-- logo -->
-      <object data="logo.svg" width="1000" height="297" id="logo">
-        <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1001 303.01">
-          <rect x=".5" width="1000" height="297" fill="#ba5a31" />
-          <text transform="translate(.5 246.04)" fill="#dcba02" font-family="HeyEloise-Regular, 'Hey Eloise'" font-size="282.34" stroke="#000" stroke-miterlimit="10">
-            <tspan x="0" y="0">Cupcakeland</tspan>
-          </text>
-        </svg>
-      </object>
-      <!-- navbar -->
-      <nav class="navbar">
-        <div class="nav-center">
-          <!-- links -->
-          <div>
-            <button class="toggle-nav">
-              <i class="fa-solid fa-cupcake">Menu</i>
-            </button>
-            <ul class="nav-links">
-              <li>
-                <a href="index.html" class="nav-link">home</a>
-              </li>
-              <li>
-                <a href="cupcakes.html" class="nav-link">cupcakes</a>
-              </li>
-              <li>
-                <a href="about.html" class="nav-link">about</a>
-              </li>
-            </ul>
-          </div>
+    
+  <header class="grid">
+    <!-- logo -->
+    <img src="images/logo.svg" alt="logo" id="logo"></img>
+    <!-- navbar -->
+    <nav class="navbar" aria-label="primary menu">
+      <ul class="navbar-links">
+        <!-- links -->
+        <li>
+          <a href="index.html" class="nav-link">home</a>
+        </li>
+        <li>
+          <a href="cupcakes.html" class="nav-link">cupcakes</a>
+        </li>
+        <!-- <a href="#cookies">Cookies</a> -->
+        <li>
+          <a href="about.html" class="nav-link">about</a>
+        </li>
+        <li>
+          <a href="about.html" class="nav-link">contact</a>
+        </li>
+        <button class="toggle-cart">
+          <li>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-item-count">1</span>
+          </li>     
+        </button>
+      </ul>
+    </nav>
+
+
+
+        <!-- <div class="theme-switch-wrapper border-toggle">
+         <span id="toggle-icon">
+            <span class="toggle-text">Light Mode</span>
+            <i class="fa-solid fa-sun"></i> 
+          </span> 
+          <label class="theme-switch">
+            <input type="checkbox" />
+            <div class="toggle-slider round"></div>
+          </label>
+        </div> -->
+
+
+
+  </header>
+  <div class="wrapper">
+      <!-- hero -->
+
+      <!-- sidebar -->
+
+      <!-- carousel -->
+      <section class="carousel-wrapper">
+        <div class="carousel" id="slides-container">
+          <div  class="carousel-image"></div>
+          <div  class="carousel-image"></div>
+          <div  class="carousel-image"></div>
+          <div  class="carousel-image"></div>
+          <div  class="carousel-image"></div>
+          <div  class="carousel-image"></div>
+          <!-- <img class="carousel-image initial" src="images/cupcakes-1.jpg" />
+          <img class="carousel-image" src="images/cupcakes-2.jpg" />
+          <img class="carousel-image" src="images/cupcakes-3.jpg" />
+          <img class="carousel-image" src="images/cupcakes-4.jpg" />
+          <img class="carousel-image" src="images/cupcakes-5.jpg" />
+          <img class="carousel-image" src="images/cupcakes-6.jpg" /> -->
         </div>
-      </nav>
-    </header>
-    <h2>home page</h2>
+
+        <div id="carousel-prev-button" class="carousel-arrow">
+          <img src="images/left-arrow.svg" alt="left arrow" />
+        </div>
+        <div id="carousel-next-button" class="carousel-arrow">
+          <img src="images/right-arrow.svg" alt="right arrow" />
+        </div>
+      </section>
+
+
+      
+      <div class="light-dark-mode">
+        <input type="checkbox" id="toggle" />
+        <label for="toggle"></label>
+      </div>
+    </div>
     <script type="module" src="index.js"></script>
   </body>
 </html>
